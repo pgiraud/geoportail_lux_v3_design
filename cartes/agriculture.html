@@ -239,6 +239,14 @@
                 <div class="layers-panel">
                     <h2>Couches</h2>
                     <button class="close-panel">✕</button>
+
+                    <div class="map-choice">
+                        <select id="map-choice">
+                            <option value="carte-topographique">Carte topographique</option>
+                            <option value="carte-base">Carte de base</option>
+                            <option value="fond-blanc">Fond blanc</option>
+                        </select>
+                    </div>
                     
                     <ul class="tabs">
                         <li id="liste">Liste</li>
@@ -246,15 +254,6 @@
                     </ul>
                     <div class="tabs-content">
                         <div id="liste-content">
-                            <div class="map-choice">
-                                <select id="map-choice">
-                                    <option value="carte-topographique">Carte topographique</option> 
-                                    <option value="carte-base">Carte de base</option>
-                                    <option value="fond-blanc">Fond blanc</option>
-                                </select>
-                                
-                                <input type="text" data-slider="true" data-slider-highlight="true">
-                            </div>
                             
                             <div class="scrollable">
                                 <ul class="layers-options">
