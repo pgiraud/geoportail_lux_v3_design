@@ -1,0 +1,271 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "geoportail-icons";
+  src:url("webfonts/geoportail-icons.eot");
+  src:url("webfonts/geoportail-icons.eot?#iefix") format("embedded-opentype"),
+    url("webfonts/geoportail-icons.woff") format("woff"),
+    url("webfonts/geoportail-icons.ttf") format("truetype"),
+    url("webfonts/geoportail-icons.svg#geoportail-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:after {
+  font-family: "geoportail-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:after,
+[class*=" icon-"]:after {
+  font-family: "geoportail-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size:3.2em;
+  color:rgba(255,255,255,.6);
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:85px;
+  text-align:center;
+  line-height:85px;
+  z-index:10;
+}
+.stacked [class^="icon-"]:after,
+.stacked [class*=" icon-"]:after  {
+    height:100%;
+}
+.main .basket-list .box:after,
+.add-to-cart-modal .chosen-product:after {
+    width:109px;
+    line-height:109px;
+    font-size:75px;
+    padding-left:8px;
+}
+.no-rgba [class^="icon-"]:after,
+.no-rgba [class*=" icon-"]:after {
+    color:#fff;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    opacity:.6;
+}
+[class^="icon-"]:hover:after,
+[class*=" icon-"]:hover:after {
+    color:#fff;
+    opacity:1;
+}
+
+
+.icon-geoportail-map-cartes:after {
+  content: "\e02b";
+}
+.icon-geoportail-acquisition-etat-1:after {
+  content: "\e037";
+}
+.icon-geoportail-acquisition-etat:after {
+  content: "\e000";
+}
+.icon-geoportail-agriculture:after {
+  content: "\e001";
+}
+.icon-geoportail-ajout-favoris:after {
+  content: "\e002";
+}
+.icon-geoportail-amenagement-territoire:after {
+  content: "\e003";
+}
+.icon-geoportail-api:after {
+  content: "\e004";
+}
+.icon-geoportail-biodiversite:after {
+  content: "\e005";
+}
+.icon-geoportail-cadastre:after {
+  content: "\e006";
+}
+.icon-geoportail-calcul-frais-route-officiel:after {
+  content: "\e007";
+}
+.icon-geoportail-calcule-itineraires:after {
+  content: "\e008";
+}
+.icon-geoportail-carto-mobile:after {
+  content: "\e009";
+}
+.icon-geoportail-carto-professionnel:after {
+  content: "\e00a";
+}
+.icon-geoportail-cartographique-geometres:after {
+  content: "\e00b";
+}
+.icon-geoportail-communes:after {
+  content: "\e00c";
+}
+.icon-geoportail-loupe:after {
+  content: "\e00d";
+}
+.icon-geoportail-layer:after {
+  content: "\e00e";
+}
+.icon-geoportail-jeux-donnees:after {
+  content: "\e00f";
+}
+.icon-geoportail-inspire:after {
+  content: "\e010";
+}
+.icon-geoportail-gocodage:after {
+  content: "\e011";
+}
+.icon-geoportail-globe:after {
+  content: "\e012";
+}
+.icon-geoportail-friches-industrieles:after {
+  content: "\e013";
+}
+.icon-geoportail-frais:after {
+  content: "\e014";
+}
+.icon-geoportail-environnement:after {
+  content: "\e015";
+}
+.icon-geoportail-eau:after {
+  content: "\e016";
+}
+.icon-geoportail-download:after {
+  content: "\e017";
+}
+.icon-geoportail-donnees-sol:after {
+  content: "\e018";
+}
+.icon-geoportail-distances-officielles:after {
+  content: "\e019";
+}
+.icon-geoportail-lunaz:after {
+  content: "\e01a";
+}
+.icon-geoportail-luxembourg:after {
+  content: "\e01b";
+}
+.icon-geoportail-map-arrows-enlarge:after {
+  content: "\e01c";
+}
+.icon-geoportail-map-cartes:after {
+  content: "\e01d";
+}
+.icon-geoportail-map-dessiner:after {
+  content: "\e01e";
+}
+.icon-geoportail-map-info:after {
+  content: "\e01f";
+}
+.icon-geoportail-map-ligne:after {
+  content: "\e020";
+}
+.icon-geoportail-map-mesure:after {
+  content: "\e021";
+}
+.icon-geoportail-map-point:after {
+  content: "\e022";
+}
+.icon-geoportail-mobile:after {
+  content: "\e023";
+}
+.icon-geoportail-mobiliteit:after {
+  content: "\e024";
+}
+.icon-geoportail-moins:after {
+  content: "\e025";
+}
+.icon-geoportail-pag:after {
+  content: "\e026";
+}
+.icon-geoportail-tourisme:after {
+  content: "\e027";
+}
+.icon-geoportail-statistiques-publiques:after {
+  content: "\e028";
+}
+.icon-geoportail-specifiques:after {
+  content: "\e029";
+}
+.icon-geoportail-share:after {
+  content: "\e02a";
+}
+.icon-geoportail-refermer:after {
+  content: "\e02b";
+}
+.icon-geoportail-public:after {
+  content: "\e02c";
+}
+.icon-geoportail-profile:after {
+  content: "\e02d";
+}
+.icon-geoportail-print:after {
+  content: "\e02e";
+}
+.icon-geoportail-preemption:after {
+  content: "\e02f";
+}
+.icon-geoportail-poi-manager:after {
+  content: "\e030";
+}
+.icon-geoportail-plus:after {
+  content: "\e031";
+}
+.icon-geoportail-panier-plus:after {
+  content: "\e032";
+}
+.icon-geoportail-panier:after {
+  content: "\e033";
+}
+.icon-geoportail-wfs:after {
+  content: "\e034";
+}
+.icon-geoportail-wizard:after {
+  content: "\e035";
+}
+.icon-geoportail-wizard-pro:after {
+  content: "\e036";
+}
+.icon-geoportail-wms:after {
+  content: "\e037";
+}
+
+
+@media only screen and (max-width: 769px) {
+    .front [class^="icon-"]:after,
+    .front [class*=" icon-"]:after {
+      left:2%;
+      bottom:0;
+      width:20%;
+      line-height:2em;
+    }
+}
+@media only screen and (min-width: 769px) {
+    [class^="icon-"]:after,
+    [class*=" icon-"]:after {
+        left:0.2em;
+        bottom:0.25em;
+    }
+    .stacked [class^="icon-"]:after,
+    .stacked [class*=" icon-"]:after {
+        width:8.5%;
+        line-height:1.5em;
+        left:0;
+        bottom:0;
+    }
+}

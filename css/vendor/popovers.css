@@ -1,0 +1,120 @@
+/* =============================================
+ *         Popovers by Gary Hepting 
+ *          Last Updated:2013-1-11
+ * ===========================================*/
+
+.popover {
+    display:none;
+    
+    width:340px;
+    color:#fff;
+    z-index:99;
+}
+.popover-header {
+    background:#63a3cf;
+    padding:20px;
+    position:relative;
+}
+.popover-header h3 {
+    font-size:40px;
+    margin:0;
+    color:#fff;
+    line-height:1;
+    text-transform:uppercase;
+}
+#popover .close {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  margin-top:-12.5px;
+  display: block;
+  width: 25px;
+  height: 24px;
+  text-indent: -9999px;
+  background: url('../../img/close-modal.png') no-repeat 0 0;
+  cursor:pointer;
+}
+#popover .close:hover,
+#popover .close:focus {
+    opacity:.5;
+}
+.popover-body {
+    padding:10px 20px;
+}
+.popover-body .field-row {
+    margin-bottom:5px;
+    position:relative;
+}
+.popover-body [class^="bubble-"] {
+    display:none;
+    position:absolute;
+    top:5px;
+    right:21px;
+    background-color:#397ba7;
+}
+.popover-body .field-row:hover [class^="bubble-"] {
+    display:block;
+}
+.popover-body input[readonly="readonly"] {
+    color:#fff;
+}
+.popover-body input[readonly="readonly"]:hover,
+.popover-body input[readonly="readonly"]:focus {
+    color:#397ba7;
+}
+
+
+.popover {
+  display: none;
+}
+
+#popover {
+  position: absolute;
+  z-index: 99;
+  background:#6fbbed;
+  color: #fff;
+  max-width: 340px;
+  min-width:280px;
+}
+#popover:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+#popover.top.right:after {
+  top: auto;
+  right: 20px;
+  bottom: -10px;
+  left: auto;
+  border-top: 10px solid #6FBBED;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+#popover.top.left:after {
+  top: auto;
+  right: auto;
+  bottom: -10px;
+  left: 20px;
+  border-top: 10px solid #6FBBED;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+#popover.bottom.right:after {
+  top: -10px;
+  right: 20px;
+  bottom: auto;
+  left: auto;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #63a3cf;
+  border-left: 10px solid transparent;
+}
+#popover.bottom.left:after {
+  top: -10px;
+  right: auto;
+  bottom: auto;
+  left: 20px;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #63a3cf;
+  border-left: 10px solid transparent;
+}

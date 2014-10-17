@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Géoportail</title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="favicon.ico" />
+        
+        <link rel="stylesheet" href="../css/normalize.min.css">
+        <link rel="stylesheet" href="../css/iconsfont.css">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/vendor/icheck.css">
+        <link rel="stylesheet" href="../css/vendor/simple-slider.css">
+        <link rel="stylesheet" href="../css/vendor/jScrollPane.css">
+        <link rel="stylesheet" href="../css/vendor/magnific-popup.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <script src="../js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body class="cartography" data-map-theme="eau">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+        <section class="welcome-overlayer">
+            <aside>
+                <button class="close-overlayer">✕</button>
+                <h1>
+                    <span>Bienvenue sur</span>
+                    la carte <br />
+                    de l'administration <br />
+                    de l'eau
+                </h1>
+                <p class="summary">
+                    Découvrez les eaux souterraines, potables, les crues, les sites protégés, etc...
+                </p>
+            </aside>
+        </section>
+
+        <header id="header" class="clearfix" role="banner">
+            <div class="geoportail-header">
+                <div id="logo">
+                    <a href="#" data-header-show="cartography-header" data-header-hide="geoportail-header" id="desktop-logo">
+                        <img src="../img/lion.png" alt="" />
+                        Le géoportail national <span>du grand-duché du Luxembourg</span>
+                    </a>
+                    <a href="#" id="mobile-logo" class="mobile">
+                        <img src="../img/lion-mobile.png" alt="Le géoportail national du grand-duché du Luxembourg" />
+                    </a>
+                </div>
+
+                <nav id="navigation" role="navigation">
+                    <ul id="main-navigation">
+                        <li class="mobile"><a href="./">Accueil</a></li>
+                        <li>
+                            <a href="cartes.html">Cartes</a>
+                            <ul class="second-level">                            
+                                <li><a href="#" class="blue folded-map">Grand-public</a></li>
+                                <li><a href="#" class="orange cob">Agriculture</a></li>
+                                <li><a href="#" class="red photo">Tourisme</a></li>
+                                <li><a href="#" class="turquoise drip">Eau</a></li>
+                                <li><a href="#" class="khaki leaf">Environnement</a></li>
+                                <li><a href="#" class="grey1 communes">Communes de Luxembourg</a></li>
+                                <li><a href="#" class="grey2 professionnels">Pour les professionels</a></li>
+                                <li><a href="#" class="grey3 geometres">Pour les géomètres</a></li>                            
+                            </ul>
+                        </li>
+                        <li><a href="#">Données</a></li>
+                        <li><a href="#">Applications</a></li>
+                        <li><a href="#">Actualités</a></li>
+                        <li><a href="#">A propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="shop-produits-tuiles.html">Shop</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="cartography-header">
+                <div id="logo">
+                    <a href="#" data-header-show="geoportail-header" data-header-hide="cartography-header" id="desktop-logo">
+                        <img src="../img/lion.png" alt="" />
+                    </a>
+                    <span class="baseline">
+                        Administration <span>de la gestion de l'eau</span>
+                    </span>
+                    <a href="#" id="mobile-logo" class="mobile">
+                        <img src="../img/lion-mobile.png" alt="Le géoportail national du grand-duché du Luxembourg" />
+                    </a>
+                </div>
+                
+                <ul id="user-experience">
+                    <li class="search">
+                        <form class="clearfix" id="navigation-search" action="search.html" method="POST" role="search">
+                            <input type="text" name="keyword" id="search-keyword" placeholder="Mot-clés" />
+                            <input type="submit" value="search" />
+                            
+                            <ul class="autocomplete">
+                                <li><a href="#">Résultat 1</a></li>
+                                <li><a href="#">Résultat 2</a></li>
+                                <li><a href="#">Résultat 3</a></li>
+                            </ul>
+                        </form>
+                    </li>
+                    <li class="square user">
+                        <a href="#" class="item">Mon compte</a>  
+                        
+                        <div id="navigation-account" class="second-level">
+                            <p class="menu-title">Mon compte</p>
+                            <form id="navigation-login" action="logged-in.html" method="POST">
+                                <fieldset>
+                                    <legend class="tab tab-account active" id="account-info">Login</legend>
+                                    <div class="account-content">
+                                        <input type="text" name="name" id="login-name" placeholder="Nom" />
+                                        <input type="password" name="password" id="login-password" placeholder="Mot de passe" />
+                                        <input type="submit" value="Envoyer" />
+                                        <div class="clearfix">
+                                            <p><a href="#" class="inline">Mot de passe oublié ?</a></p>
+                                            <p><a href="#" class="inline">Pas encore membre ?</a></p>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>                        
+                    </li>
+                    <li class="square language">
+                        <a href="#" class="item">Langues</a>
+                        <ul class="second-level">
+                            <li class="square"><a href="#" hreflang="en" class="item">EN</a></li>
+                            <li class="square"><a href="#" hreflang="de" class="item">DE</a></li>
+                            <li class="square current"><a href="#" hreflang="fr" class="item">FR</a></li>
+                            <li class="square"><a href="#" hreflang="lu" class="item">LU</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        
+        <div id="main-container">
+            <div class="main clearfix" role="main">                
+                <!-- MAPS GOES HERE -->
+                <ul class="map-controls">
+                    <li class="zoom-in">Zoomer</li>
+                    <li class="zoom-out">Dézoomer</li>
+                    <li class="see-lu">Voir tout le luxembourg</li>
+                    <li class="enlarge">Enlarge</li>
+                </ul>
+                
+                
+                <div class="map-legend">
+                    <div class="map-legend-content">
+                        <span class="distance">10 km</span>
+                    
+                        <div class="scale select">
+                            <span class="select-value">1 : 1'500'000</span>
+                            <ul>
+                                <li>1 : 1'500'000</li>
+                                <li>1 : 1'500'000</li>
+                                <li>1 : 1'500'000</li>
+                                <li>1 : 1'500'000</li>
+                                <li>1 : 1'500'000</li>
+                                <li>1 : 1'500'000</li>
+                            </ul>
+                        </div>
+
+                        <div class="coordinates-type select">
+                            <span class="select-value">LUREF Luxembourg 1930 / Gauss</span>
+                            <ul>
+                                <li>LUREF Luxembourg 1930 / Gauss</li>
+                                <li>long/lat:WGS84</li>
+                                <li>UTM</li>
+                            </ul>
+                        </div>
+                        <span class="coordinates">04°34’39.5’’  E (4.57763),   49°03’16.9’’N   (49.05470) - Altitude : 317.3 m</span>
+                    </div>
+                    <span class="toggle-legend">Fermer</span>
+                </div>
+            </div> <!-- #main -->
+            
+            <aside class="sidepanel">
+                <div class="maps-panel">
+                    <h2>Cartes</h2>
+                    <button class="close-panel">✕</button>
+                    
+                    <ul class="tabs">
+                        <li id="themes">Thèmes</li>
+                        <li id="mes-themes">Mes cartes</li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div id="themes-content">
+                            <div class="scrollable">
+                                <ul class="themes-list clearfix">
+                                    <li class="grand-public">
+                                        <a href="#">Grand-public</a>
+                                    </li>
+                                    <li class="agriculture">
+                                        <a href="#">Agriculture</a>
+                                    </li>
+                                    <li class="tourisme">
+                                        <a href="#">Tourisme</a>
+                                    </li>
+                                    <li class="eau">
+                                        <a href="#">Eau</a>
+                                    </li>
+                                    <li class="environnement">
+                                        <a href="#">Environnement</a>
+                                    </li>
+                                    <li class="plan-amenagement">
+                                        <a href="#">Plan d'aménagement</a>
+                                    </li>
+                                    <li class="sol">
+                                        <a href="#">Données du sol</a>
+                                    </li>
+                                    <li class="mobilite">
+                                        <a href="#">Mobilitéits zentral</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="mes-themes-content">
+                            <div class="scrollable">
+                                <ul class="themes-list clearfix">
+                                    <li class="eau">
+                                        <a href="#">Eau</a>
+                                    </li>
+                                    <li class="environnement">
+                                        <a href="#">Environnement</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="layers-panel">
+                    <h2>Couches</h2>
+                    <button class="close-panel">✕</button>
+                    
+                    <ul class="tabs">
+                        <li id="liste">Liste</li>
+                        <li id="mes-couches">Mes couches (3)</li>
+                    </ul>
+                    <div class="tabs-content">
+                        <div id="liste-content">
+                            <div class="map-choice">
+                                <select id="map-choice">
+                                    <option value="carte-topographique">Carte topographique</option> 
+                                    <option value="carte-base">Carte de base</option>
+                                    <option value="fond-blanc">Fond blanc</option>
+                                </select>
+                                
+                                <input type="text" data-slider="true" data-slider-highlight="true">
+                            </div>
+                            
+                            <div class="scrollable">
+                                <ul class="layers-options">
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="toggle-accordion">Morphométrie</span>
+                                                <ul class="accordion-content">
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
+                                                        <input id="courbes-niveau-10m" type="checkbox" />
+                                                        <ul class="third-level">
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                            <li>
+                                                                <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                                <span class="gfx-polygon">Polygon</span>
+                                                                <label>Courbes de niveau 10m</label>
+                                                                <input type="checkbox" />
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                    <li>
+                                                        <a href="#layer-info1" class="layer-info" data-modal="open">Informations</a>
+                                                        <span class="gfx-polygon">Polygon</span>
+                                                        <label>Courbes de niveau 10m</label>
+                                                        <input type="checkbox" />
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="mes-couches-content">
+                            <div class="scrollable">
+                                <ul class="my-layers">
+                                    <li>
+                                        <div class="toggle-accordion">
+                                            <span class="layer-info">Informations</span>
+                                            <span class="gfx-polygon">Polygon</span>
+                                            <label>Courbes de niveau 10m</label>
+                                        </div>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="slider"><input type="text" data-slider="true" data-slider-highlight="true"></span>
+                                                <span class="delete-layer">Supprimer</span>
+                                                <input type="checkbox" />
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="toggle-accordion">
+                                            <span class="layer-info">Informations</span>
+                                            <span class="gfx-polygon">Polygon</span>
+                                            <label>Courbes de niveau 10m</label>
+                                        </div>
+                                        <ul class="accordion-content">
+                                            <li>
+                                                <span class="slider"><input type="text" data-slider="true" data-slider-highlight="true"></span>
+                                                <span class="delete-layer">Supprimer</span>
+                                                <input type="checkbox" />
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <section id="layer-info1" class="modal mfp-hide">
+                    <header>
+                        <h3>Adresses</h3>
+                        <a href="#" class="close mfp-cross mfp-close">Fermer</a>
+                    </header>
+                    <div class="modal-body">
+                        <dl class="layer-info">
+                            <dt>Nom</dt>
+                            <dd>Adresses</dd>
+                            
+                            <dt>Descriptiion</dt>
+                            <dd>Cette couche contient les adresses du jeu de données des adresses de l'administration du cadastre et de la topographie (ACT). Les noms de rue proviennent du Registre National des Localités et des Rues (CACLR), également géré par l'ACT. Les points sont positionnés sur le centre du bâtiment ou à défaut sur le centre de la parcelle liée à l'adresse.</dd>
+                        
+                            <dt>Mots clé</dt>
+                            <dd>adresses,rue,numéro de maison,géocodage</dd>
+                        
+                            <dt>Contact</dt>
+                            <dd>
+                                Administration du Cadastre et de la Topographie <br />
+                                54 avenue Gaston Diderich <br />
+                                L-1420 Luxembourg <br />
+                                +352 44901 - 1 <br />
+                                act@act.etat.lu <br />                          
+                            </dd>
+                        
+                            <dt>Métadonnées complètes</dt>
+                            <dd><a href="#">Link</a></dd>
+                        </dl>
+                        
+                        <p>Pas de légende spécifique pour cette couche</p>
+                    </div>
+                </section>
+            </aside>
+        </div> <!-- #main-container -->
+
+        <footer id="footer">
+            <ul id="footer-navigation">              
+                <li><a href="http://www.act.public.lu" id="link-act" target="_blank">ACT</a></li>                    
+            </ul>
+            
+            <ul class="left-menu">
+                <li><a href="#" class="cartes square" data-slidepanel="maps-panel">Cartes</a></li>
+                <li>
+                    <a href="#" class="couches square" data-slidepanel="layers-panel">Couches</a>
+                    <div class="second-level">
+                    </div>    
+                </li>   
+            </ul>
+            
+            <aside id="tool-box" class="desktop">
+                <ul>
+                    <li><a href="#" class="draw square has-child">Dessiner</a>
+                        <ul class="second-level">
+                            <li class="square"><button class="distance">Distance</button></li>
+                            <li class="square"><button class="surface">Surface</button></li>
+                            <li class="square"><button class="azimut">Azimut</button></li>
+                            <li class="square"><button class="altimetrique">Profil altimétrique</button></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="measure square has-child">Mesurer</a>
+                        <ul class="second-level">
+                            <li class="square"><button class="distance">Distance</button></li>
+                            <li class="square"><button class="surface">Surface</button></li>
+                            <li class="square"><button class="azimut">Azimut</button></li>
+                            <li class="square"><button class="altimetrique">Profil altimétrique</button></li>
+                        </ul>   
+                    </li>                     
+                    <li>
+                        <a href="#" class="print square has-child">Print</a>
+                        <div class="second-level">
+                            <p class="menu-title">Imprimer</p>
+                            <form class="print-form">
+                                <div class="form-field">
+                                    <input type="text" id="title" placeholder="Titre">
+                                </div>
+                                <div class="form-field">
+                                    <input type="checkbox" id="legend">
+                                    <label for="legend">avec légende</label>
+                                </div>
+                                <div class="form-field">
+                                    <select name="layout" id="layout">
+                                        <option value="a4paysage">A4 Paysage</option>
+                                    </select>
+                                </div>
+                                <div class="form-field">
+                                    <select name="echelle" id="layout">
+                                        <option value="a4paysage">1:400'000</option>
+                                    </select>
+                                </div>
+                                <button type="button" class="btn-primary">PDF</button>
+                            </form>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#" id="share-button" class="share square">Share</a>
+                        <div class="second-level">
+                            <p class="menu-title">Share</p>
+                            <ul class="social-sharing">
+                                <li class="facebook"><a href="#">Partager sur facebook</a></li>
+                                <li class="twitter"><a href="#">Partager sur twitter</a></li>
+                                <li class="gplus"><a href="#">Partager sur google plus</a></li>
+                                <li class="mail"><a href="#">Partager par mail</a></li>
+                            </ul>
+                        </div>    
+                    </li>                     
+                </ul>                
+            </aside>                 
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="../js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="../js/vendor/jquery.transit.min.js"></script>
+        <script src="../js/vendor/jquery.touchSwipe.min.js"></script>
+        <script src="../js/vendor/jquery.mousewheel.min.js"></script>
+        <script src="../js/vendor/jquery.carouFredSel-6.2.1-packed.js"></script>
+        <script src="../js/vendor/jquery.tinysort.min.js"></script>
+        <script src="../js/vendor/icheck.min.js"></script>
+        <script src="../js/vendor/jquery.selectbox-0.2.min.js"></script>
+        <script src="../js/vendor/jquery.placeholder.min.js"></script>
+        <script src="../js/vendor/simple-slider.min.js"></script>
+        <script src="../js/vendor/jquery.jScrollPane.min.js"></script>
+        <script src="../js/vendor/jquery.modal.js"></script>
+        <script src="../js/vendor/jquery-ui-sortable.min.js"></script>
+        <script src="../js/geoListBox.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/cartography.js"></script>
+    </body>
+</html>

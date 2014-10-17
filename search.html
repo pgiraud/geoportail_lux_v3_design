@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Géoportail</title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="favicon.ico" />
+        
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/iconsfont.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body class="search">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header id="header" class="clearfix" role="banner">
+            <div id="logo">
+                <a href="./" id="desktop-logo">
+                    <img src="./img/lion.png" alt="" />
+                    Le géoportail national <span>du grand-duché du Luxembourg</span>
+                </a>
+                <a href="#" id="mobile-logo" class="mobile">
+                    <img src="./img/lion-mobile.png" alt="Le géoportail national du grand-duché du Luxembourg" />
+                </a>
+                
+            </div>
+            <nav id="navigation" role="navigation">
+                <ul id="main-navigation">
+                    <li class="mobile"><a href="./">Accueil</a></li>
+                    <li>
+                        <a href="cartes.html">Cartes</a>
+                        <ul class="second-level maps-menu">                            
+                            <li><a href="#" class="bgc-869293 icon-geoportail-agriculture">Grand-public</a></li>
+                            <li><a href="#" class="bgc-f39c11 icon-geoportail-cadastre">Agriculture</a></li>
+                            <li><a href="#" class="bgc-e84c3d icon-geoportail-carto-professionnel">Tourisme</a></li>
+                            <li><a href="#" class="bgc-16a085 icon-geoportail-donnees-sol">Eau</a></li>
+                            <li><a href="#" class="bgc-879d31 icon-geoportail-luxembourg">Environnement</a></li>
+                            <li><a href="#" class="bgc-16a085 icon-geoportail-public">Communes de Luxembourg</a></li>
+                            <li><a href="#" class="bgc-2a80b9 icon-geoportail-specifiques">Pour les professionels</a></li>
+                            <li><a href="#" class="bgc-3e5266 icon-geoportail-api">Pour les géomètres</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">Données</a></li>
+                    <li><a href="#">Applications</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="shop-produits-tuiles.html">Shop</a></li>
+                </ul>
+                <ul id="user-experience">
+                    <li class="square search">
+                        <a href="#" class="item ir">Recherche</a>                        
+                        <form id="navigation-search" class="second-level" action="search.html" method="POST" role="search">
+                            <p class="menu-title">Recherche</p>
+                            <input type="text" name="keyword" id="search-keyword" placeholder="Mot-clés" />
+                            <input type="submit" value="search" />
+                        </form>
+                    </li>
+                    <li class="square user">
+                        <a href="#" class="item ir">Mon compte</a>  
+                        
+                        <div id="navigation-account" class="second-level">
+                            <p class="menu-title">Mon compte</p>
+                            <form id="navigation-login" action="logged-in.html" method="POST">
+                                <fieldset>
+                                    <legend class="tab tab-account active" id="account-info">Login</legend>
+                                    <div class="account-content">
+                                        <input type="text" name="name" id="login-name" placeholder="Nom" />
+                                        <input type="password" name="password" id="login-password" placeholder="Mot de passe" />
+                                        <input type="submit" value="Envoyer" />
+                                        <div class="clearfix">
+                                            <p><a href="#" class="inline">Mot de passe oublié ?</a></p>
+                                            <p><a href="#" class="inline">Pas encore membre ?</a></p>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>                        
+                    </li>
+                    <li class="square language">
+                        <a href="#" class="item ir">Langues</a>
+                        <ul class="second-level">
+                            <li class="square"><a href="#" hreflang="en" class="item">EN</a></li>
+                            <li class="square"><a href="#" hreflang="de" class="item">DE</a></li>
+                            <li class="square current"><a href="#" hreflang="fr" class="item">FR</a></li>
+                            <li class="square"><a href="#" hreflang="lu" class="item">LU</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="main-container">
+            <div class="main  clearfix" role="main">                
+                <section>
+                    <header id="content-header"><h1>Résultats de recherche</h1></header>
+                    <div id="sub-header">Nous avons trouvé <b>10</b> résultats pour votre recherche <b>"cartes"</b>.</div>
+                    <ol id="content-list">
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Le cadastre dans l'air 2.0</a></h2>
+                                    <span class="date">08/07/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Dans le guichet cartographique grand public vous pouvez afficher, étudier et interroger les géodonnées publiques des instances officielles luxembourgeoises. </p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Lorem Ipsum</a></h2>
+                                    <span class="date">01/09/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel elementum neque. Praesent consectetur orci est, in bibendum lectus porta euismod. In a bibendum ipsum. Ut sed mauris feugiat, volutpat lorem at, semper odio. Suspendisse vitae leo non est aliquet ultricies.</p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Le cadastre dans l'air 2.0</a></h2>
+                                    <span class="date">08/07/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Dans le guichet cartographique grand public vous pouvez afficher, étudier et interroger les géodonnées publiques des instances officielles luxembourgeoises. </p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Le cadastre dans l'air 2.0</a></h2>
+                                    <span class="date">08/07/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Dans le guichet cartographique grand public vous pouvez afficher, étudier et interroger les géodonnées publiques des instances officielles luxembourgeoises. </p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Le cadastre dans l'air 2.0</a></h2>
+                                    <span class="date">08/07/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Dans le guichet cartographique grand public vous pouvez afficher, étudier et interroger les géodonnées publiques des instances officielles luxembourgeoises. </p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Le cadastre dans l'air 2.0</a></h2>
+                                    <span class="date">08/07/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Dans le guichet cartographique grand public vous pouvez afficher, étudier et interroger les géodonnées publiques des instances officielles luxembourgeoises. </p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Le cadastre dans l'air 2.0</a></h2>
+                                    <span class="date">08/07/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Dans le guichet cartographique grand public vous pouvez afficher, étudier et interroger les géodonnées publiques des instances officielles luxembourgeoises. </p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Le cadastre dans l'air 2.0</a></h2>
+                                    <span class="date">08/07/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Dans le guichet cartographique grand public vous pouvez afficher, étudier et interroger les géodonnées publiques des instances officielles luxembourgeoises. </p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                        <li>
+                            <article>
+                                <header>
+                                    <h2><a href="#">Le cadastre dans l'air 2.0</a></h2>
+                                    <span class="date">08/07/2013</span>
+                                </header>
+                                <div class="content">
+                                    <p>Dans le guichet cartographique grand public vous pouvez afficher, étudier et interroger les géodonnées publiques des instances officielles luxembourgeoises. </p>
+                                    <p class="read-more"><a href="">En savoir plus</a></p>
+                                </div>
+                            </article>                                
+                        </li>
+                    </ol>
+                    <div id="content-list-pager">
+                        <div id="content-list-pager-wrapper">
+                            <a href="#" class="prev">précédent</a>
+                            <a href="#" class="page">1</a>
+                            <a href="#" class="page">2</a>
+                            <a href="#" class="page">3</a>
+                            <a href="#" class="page">4</a>
+                            <a href="#" class="page">5</a>
+                            <a href="#" class="page">6</a>
+                            <a href="#" class="page">7</a>
+                            <a href="#" class="page">8</a>
+                            <a href="#" class="page">9</a>
+                            <a href="#" class="page">10</a>
+                            <a href="#" class="page">11</a>
+                            <a href="#" class="page">12</a>
+                            <a href="#" class="page current">13</a>
+                            <a href="#" class="page">14</a>
+                            <a href="#" class="page">15</a>
+                            <a href="#" class="page">16</a>
+                            <a href="#" class="page">17</a>
+                            <a href="#" class="next">suivant</a>
+                        </div>
+                    </div>
+                </section>
+            </div> <!-- #main -->
+            
+            <aside class="box-listing-container"  data-filtered="false" data-carousel="true">            
+               <ul class="box-listing filtered-listing">
+                   <li class="box need" data-particuliers="false" data-professionels="true" data-developpeurs="false">
+                       <a href="#">
+                           <article>
+                               <p class="meta">Besoin spécifique</p>
+                               <h2>Commander un plan de mesurage</h2>
+                               <p class="tags"><span>professionnels</span></p>
+                               <p class="summary">Carte thématique dédiée au plan de mesurage</p>
+                           </article>
+                       </a>
+                   </li>                        
+                   <li class="box need" data-particuliers="true" data-professionels="false" data-developpeurs="false">
+                       <a href="#">
+                           <article>
+                               <p class="meta">Besoin spécifique</p>
+                               <h2>Je veux voir ma parcelle cadastrale</h2>
+                               <p class="tags"><span>particuliers</span></p>
+
+                           </article>
+                       </a>
+                   </li>                        
+                   <li class="box need" data-particuliers="false" data-professionels="true" data-developpeurs="false">
+                       <a href="#">
+                           <article>
+                               <p class="meta">Besoin spécifique</p>
+                               <h2>Rechercher les données inspire</h2>
+                               <p class="tags"><span>professionnels</span></p>
+
+                           </article>
+                       </a>
+                   </li>                        
+                   <li class="box need" data-particuliers="false" data-professionels="false" data-developpeurs="true">
+                       <a href="#">
+                           <article>
+                               <p class="meta">Besoin spécifique</p>
+                               <h2>Comment geocoder des adresses en bloc</h2>
+                               <p class="tags"><span>développeurs</span></p>
+
+                           </article>
+                       </a>
+                   </li>                                                                 
+               </ul>                                    
+            </aside>        
+        </div> <!-- #main-container -->
+
+        <footer id="footer">
+            <ul id="footer-navigation">
+                <li><a href="#" >Aspects légaux</a></li>
+                <li><a href="#" >Aide</a></li>                
+                <li><a href="#" >Plan du site</a></li>                
+                <li><a href="http://www.act.public.lu" id="link-act" target="_blank">ACT</a></li>                    
+            </ul>
+            
+            <aside id="tool-box" class="desktop">
+                <ul>
+                    <li><a href="javascript:window.print();" class="print square">Print</a></li>
+                    <li>
+                        <a href="#" id="share-button" class="share square">Share</a>
+                        <div class="second-level">
+                            <p class="menu-title">Share</p>                                
+                        </div>    
+                    </li>                        
+                </ul>                
+            </aside>                  
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="js/vendor/jquery.transit.min.js"></script>
+        <script src="js/vendor/jquery.touchSwipe.min.js"></script>
+        <script src="js/vendor/jquery.mousewheel.min.js"></script>
+        <script src="js/vendor/jquery.carouFredSel-6.2.1-packed.js"></script>
+        <script src="js/vendor/jquery.tinysort.min.js"></script>
+        <script src="js/vendor/jquery.placeholder.min.js"></script>
+        <script src="js/geoListBox.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

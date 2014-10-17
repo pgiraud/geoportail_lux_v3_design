@@ -1,0 +1,27 @@
+.slider {
+  width: 100%;
+  margin-top:6px;
+}
+
+.slider > .dragger {
+  width: 18px;
+  height: 18px;
+  
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+
+.slider > .track, .slider > .highlight-track {
+  background: #ecf0f1;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  height: 12px;
+}
+
+.slider > .highlight-track {
+    opacity:0.9;
+}
+

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Géoportail</title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="favicon.ico" />
+
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/iconsfont.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body class="front">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header id="header" class="clearfix" role="banner">
+            <h1 id="logo">
+                <a href="./" id="desktop-logo">
+                    <img src="./img/lion.png" alt="" />
+                    Le géoportail national <span>du grand-duché du Luxembourg</span>
+                </a>
+                <a href="#" id="mobile-logo" class="mobile">
+                    <img src="./img/lion-mobile.png" alt="Le géoportail national du grand-duché du Luxembourg" />
+                </a>
+                
+            </h1>
+            <nav id="navigation" role="navigation">
+                <ul id="main-navigation">
+                    <li class="mobile"><a href="./">Accueil</a></li>
+                    <li>
+                        <a href="cartes.html">Cartes</a>
+                        <ul class="second-level maps-menu">                            
+                            <li><a href="#" class="bgc-869293 icon-geoportail-agriculture">Grand-public</a></li>
+                            <li><a href="#" class="bgc-f39c11 icon-geoportail-cadastre">Agriculture</a></li>
+                            <li><a href="#" class="bgc-e84c3d icon-geoportail-carto-professionnel">Tourisme</a></li>
+                            <li><a href="#" class="bgc-16a085 icon-geoportail-donnees-sol">Eau</a></li>
+                            <li><a href="#" class="bgc-879d31 icon-geoportail-luxembourg">Environnement</a></li>
+                            <li><a href="#" class="bgc-16a085 icon-geoportail-public">Communes de Luxembourg</a></li>
+                            <li><a href="#" class="bgc-2a80b9 icon-geoportail-specifiques">Pour les professionels</a></li>
+                            <li><a href="#" class="bgc-3e5266 icon-geoportail-api">Pour les géomètres</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">Données</a></li>
+                    <li><a href="#">Applications</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="shop-produits-tuiles.html">Shop</a></li>
+                </ul>
+                <ul id="user-experience">
+                    <li class="square search">
+                        <a href="#" class="item ir">Recherche</a>                        
+                        <form id="navigation-search" class="second-level" action="search.html" method="POST" role="search">
+                            <p class="menu-title">Recherche</p>
+                            <input type="text" name="keyword" id="search-keyword" placeholder="Mot-clés" />
+                            <input type="submit" value="search" />
+                        </form>
+                    </li>
+                    <li class="square user">
+                        <a href="#" class="item ir">Mon compte</a>  
+                        
+                        <div id="navigation-account" class="second-level logged-in">
+                                <p class="menu-title">Mon compte</p>
+                                <div class="tab tab-account" id="account-info"><img src="img/logged-in.png" alt="" /></div>
+                                <div class="account-content">
+                                    <ul id="content-account-info">
+                                        <li><a href="#">John</a></li>
+                                        <li><a href="#">john.doe@example.com</a></li>
+                                        <li><a href="#">●●●●●●●●●●●●●●</a></li>
+                                    </ul>
+                                </div>
+                        </div>                        
+                    </li>
+                    <li class="square language">
+                        <a href="#" class="item ir">Langues</a>
+                        <ul class="second-level">
+                            <li class="square"><a href="#" hreflang="en" class="item">EN</a></li>
+                            <li class="square"><a href="#" hreflang="de" class="item">DE</a></li>
+                            <li class="square current"><a href="#" hreflang="fr" class="item">FR</a></li>
+                            <li class="square"><a href="#" hreflang="lu" class="item">LU</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div id="banner">
+            <ul id="carousel">
+                <li>
+                    <article style="background-image: url('./img/slider-image.png');">
+                        <div class="slide-content">
+                            <h2 class="title2"><span>Bienvenue sur</span>Le géoportail national du grand-duché de Luxembourg</h2>
+                            <p>Découvrez nos cartes thématiques, notre catalogue et d’autres produits.</p>
+                            <p>En créant votre compte, vous aurez la possibilité d’accéder à des fonctionnalités supplémentaires... 
+                            <p class="read-more"><a href="#">En savoir plus</a></p>                        
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article style="background-image: url('./img/slider-image.png');">
+                        <div class="slide-content">
+                            <h2 class="title2"><span>Bienvenue sur</span>Le géoportail national du grand-duché de Luxembourg</h2>
+                            <p>Découvrez nos cartes thématiques, notre catalogue et d’autres produits. En créant votre compte, vous aurez la possibilité d’accéder à des fonctionnalités supplémentaires... 
+                            <p class="read-more"><a href="#">En savoir plus</a></p>                        
+                        </div>
+                    </article>
+                </li>
+                <li>
+                    <article style="background-image: url('./img/slider-image.png');">
+                        <div class="slide-content">
+                            <h2 class="title2"><span>Bienvenue sur</span>Le géoportail national du grand-duché de Luxembourg</h2>
+                            <p>Découvrez nos cartes thématiques, notre catalogue et d’autres produits. En créant votre compte, vous aurez la possibilité d’accéder à des fonctionnalités supplémentaires... 
+                            <p class="read-more"><a href="#">En savoir plus</a></p>                                              
+                        </div>
+                    </article>
+                </li>
+                             
+            </ul>
+            <div id="carousel-pager"></div>
+            <div id="carousel-mask"></div>
+            
+            <aside id="twitter-feed">
+                <h2>Geoportail Luxembourg</h2>
+                <p>Le cadastre entre dans l’ère 2.0. Nous venons de placer une boîte twitter qui peut contenir 140 caractères, la longueur max d’un message...</p>
+            </aside>
+        </div>
+        
+        <div id="main-container">
+            <div class="main  clearfix" role="main">                
+                <div id="list-filter" class="desktop">
+                    <div class="w25 filter all active" data-filter="all">Afficher tout</div>
+                    <div class="w25 filter particuliers" data-filter="particuliers">Particuliers</div>
+                    <div class="w25 filter professionnels" data-filter="professionels">Professionnels</div>
+                    <div class="w25 filter developpeurs" data-filter="developpeurs">Développeurs</div>                    
+                </div>
+                <div class="box-listing-container"  data-filtered="true" data-carousel="true">            
+                    <ul class="box-listing filtered-listing">
+                        <li class="box folded-map blue" data-particuliers="true" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Cartes</p>
+                                    <h2>Grand-public</h2>
+                                    <p class="tags"><span>particuliers</span> / <span>professionnels</span></p>
+                                    <p class="summary">Carte thématique dédiée au grand-public</p>
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box orange cob" data-particuliers="false" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Cartes</p>
+                                    <h2>Agriculture</h2>
+                                    <p class="tags"><span>professionnels</span></p>
+                                    <p class="summary">Carte thématique dédiée au thème de l'agriculture</p>
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box red photo" data-particuliers="true" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Cartes</p>
+                                    <h2>Tourisme</h2>
+                                    <p class="tags"><span>particuliers</span> / <span>professionnels</span></p>
+                                    <p class="summary">Carte thématique dédiée au thème du tourisme</p>
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box turquoise drip" data-particuliers="true" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Cartes</p>
+                                    <h2>Eau</h2>
+                                    <p class="tags"><span>particuliers</span> / <span>professionnels</span></p>
+                                    <p class="summary">Carte thématique dédiée au thème de l'eau</p>
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box khaki leaf" data-particuliers="true" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Cartes</p>
+                                    <h2>Environnement</h2>
+                                    <p class="tags"><span>particuliers</span> / <span>professionnels</span></p>
+                                    <p class="summary">Carte thématique dédiée au thème de l'environnement</p>
+                                </article>
+                            </a>
+                        </li>                        
+                    </ul>                   
+                </div>
+                
+                 <div class="box-listing-container"  data-filtered="true" data-carousel="true">            
+                    <ul class="box-listing filtered-listing">
+                        <li class="box need" data-particuliers="false" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Besoin spécifique</p>
+                                    <h2>Commander un plan de mesurage</h2>
+                                    <p class="tags"><span>professionnels</span></p>
+                                    <p class="summary">Carte thématique dédiée au plan de mesurage</p>
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box need" data-particuliers="true" data-professionels="false" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Besoin spécifique</p>
+                                    <h2>Je veux voir ma parcelle cadastrale</h2>
+                                    <p class="tags"><span>particuliers</span></p>
+                                    
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box need" data-particuliers="false" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Besoin spécifique</p>
+                                    <h2>Rechercher les données inspire</h2>
+                                    <p class="tags"><span>professionnels</span></p>
+                                    
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box need" data-particuliers="false" data-professionels="false" data-developpeurs="true">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Besoin spéspécifique</p>
+                                    <h2>Comment geocoder des adresses en bloc</h2>
+                                    <p class="tags"><span>développeurs</span></p>
+                                    
+                                </article>
+                            </a>
+                        </li>                                                                 
+                    </ul>                
+                </div>
+                
+                <div class="box-listing-container"  data-filtered="true" data-carousel="true">            
+                    <ul class="box-listing filtered-listing">
+                        <li class="box purple itinerary" data-particuliers="true" data-professionels="false" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Applications</p>
+                                    <h2>Calcul d'itinéraire</h2>
+                                    <p class="tags"><span>particuliers</span></p>
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box parma distances" data-particuliers="false" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Applications</p>
+                                    <h2>Calcul des distances officielles</h2>
+                                    <p class="tags"><span>professionnels</span></p>
+                                    
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box green conversion" data-particuliers="false" data-professionels="true" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Applications</p>
+                                    <h2>Conversion des données</h2>
+                                    <p class="tags"><span>professionnels</span></p>
+                                    
+                                </article>
+                            </a>
+                        </li>                        
+                        <li class="box grey app-store" data-particuliers="true" data-professionels="false" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Applications</p>
+                                    <h2>App Store</h2>
+                                    <p class="tags"><span>particuliers</span></p>
+                                    
+                                </article>
+                            </a>
+                        </li>                                                                 
+                        <li class="box grey  google-play" data-particuliers="true" data-professionels="false" data-developpeurs="false">
+                            <a href="#">
+                                <article>
+                                    <p class="meta">Applications</p>
+                                    <h2>Google Play</h2>
+                                    <p class="tags"><span>particuliers</span></p>
+                                    
+                                </article>
+                            </a>
+                        </li>                                                                 
+                    </ul>             
+                </div>
+                
+                
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+        <footer id="footer">
+            <ul id="footer-navigation">
+                <li><a href="#" >Aspects légaux</a></li>
+                <li><a href="#" >Aide</a></li>                
+                <li><a href="#" >Plan du site</a></li>                
+                <li><a href="http://www.act.public.lu" id="link-act" target="_blank">ACT</a></li>                    
+            </ul>
+            
+            <aside id="tool-box" class="desktop">
+                <ul>
+                    <li><a href="javascript:window.print();" class="print square">Print</a></li>
+                    <li>
+                        <a href="#" id="share-button" class="share square">Share</a>
+                        <div class="second-level">
+                            <p class="menu-title">Share</p>                                
+                        </div>    
+                    </li>                        
+                </ul>                
+            </aside>                 
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="js/vendor/jquery.transit.min.js"></script>
+        <script src="js/vendor/jquery.touchSwipe.min.js"></script>
+        <script src="js/vendor/jquery.mousewheel.min.js"></script>
+        <script src="js/vendor/jquery.carouFredSel-6.2.1-packed.js"></script>
+        <script src="js/vendor/jquery.tinysort.min.js"></script>
+        <script src="js/vendor/jquery.placeholder.min.js"></script>
+        <script src="js/geoListBox.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

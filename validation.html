@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Géoportail</title>
+        <meta name="description" content="">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" href="favicon.ico" />
+        
+        <link rel="stylesheet" href="css/normalize.min.css">
+        <link rel="stylesheet" href="css/iconsfont.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/vendor/jquery.selectbox.css">
+        <link rel="stylesheet" href="css/vendor/icheck.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    </head>
+    <body class="purchasing">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <header id="header" class="clearfix" role="banner">
+            <div id="logo">
+                <a href="./" id="desktop-logo">
+                    <img src="./img/lion.png" alt="" />
+                    Le géoportail national <span>du grand-duché du Luxembourg</span>
+                </a>
+                <a href="#" id="mobile-logo" class="mobile">
+                    <img src="./img/lion-mobile.png" alt="Le géoportail national du grand-duché du Luxembourg" />
+                </a>
+                
+            </div>
+            <nav id="navigation" role="navigation">
+                <ul id="main-navigation">
+                    <li class="mobile"><a href="./">Accueil</a></li>
+                    <li>
+                        <a href="cartes.html">Cartes</a>
+                        <ul class="second-level maps-menu">                            
+                            <li><a href="#" class="bgc-869293 icon-geoportail-agriculture">Grand-public</a></li>
+                            <li><a href="#" class="bgc-f39c11 icon-geoportail-cadastre">Agriculture</a></li>
+                            <li><a href="#" class="bgc-e84c3d icon-geoportail-carto-professionnel">Tourisme</a></li>
+                            <li><a href="#" class="bgc-16a085 icon-geoportail-donnees-sol">Eau</a></li>
+                            <li><a href="#" class="bgc-879d31 icon-geoportail-luxembourg">Environnement</a></li>
+                            <li><a href="#" class="bgc-16a085 icon-geoportail-public">Communes de Luxembourg</a></li>
+                            <li><a href="#" class="bgc-2a80b9 icon-geoportail-specifiques">Pour les professionels</a></li>
+                            <li><a href="#" class="bgc-3e5266 icon-geoportail-api">Pour les géomètres</a></li>                            
+                        </ul>
+                    </li>
+                    <li><a href="#">Données</a></li>
+                    <li><a href="#">Applications</a></li>
+                    <li><a href="#">Actualités</a></li>
+                    <li><a href="#">A propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#" class="active">Shop</a></li>
+                </ul>
+                <ul id="user-experience">
+                    <li class="square search">
+                        <a href="#" class="item ir">Recherche</a>                        
+                        <form id="navigation-search" class="second-level" action="search.html" method="POST" role="search">
+                            <p class="menu-title">Recherche</p>
+                            <input type="text" name="keyword" id="search-keyword" placeholder="Mot-clés" />
+                            <input type="submit" value="search" />
+                        </form>
+                    </li>
+                    <li class="square user">
+                        <a href="#" class="item ir" data-notifications="2">Mon compte</a>  
+                        
+                        <div id="navigation-account" class="second-level logged-in">
+                                <p class="menu-title">Mon compte</p>
+                                <div class="tab tab-account active" id="account-info"><img src="img/logged-in.png" alt="" /></div>
+                                <div class="tab" id="view-map"><img src="img/logged-in.png" alt="" /></div>
+                                <div class="tab" id="fav"><img src="img/logged-in.png" alt="" /></div>
+                                <div class="tab" id="account-cart" data-notifications="2"><img src="img/logged-in.png" alt="" /></div>
+                                <div class="account-content">
+                                    <ul id="content-account-info">
+                                        <li><a href="#">John</a></li>
+                                        <li><a href="#">john.doe@example.com</a></li>
+                                        <li><a href="#">●●●●●●●●●●●●●●</a></li>
+                                        <li><a href="#" class="link">Mon compte</a></li>
+                                        <li><a href="#" class="link">Mon panier</a></li>
+                                    </ul>
+                                    
+                                    <ul id="content-account-cart">
+                                        <li>
+                                            <a href="#">Product 1</a>
+                                            <a href="#" class="delete">Supprimer</a>
+                                            <a href="#" class="edit">Editer</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Product 2</a>
+                                            <a href="#" class="delete">Supprimer</a>
+                                            <a href="#" class="edit">Editer</a>
+                                        </li>
+                                        <li><a href="#" class="link">Mon panier</a></li>
+                                    </ul>
+                                </div>
+                        </div>                         
+                    </li>
+                    <li class="square language">
+                        <a href="#" class="item ir">Langues</a>
+                        <ul class="second-level">
+                            <li class="square"><a href="#" hreflang="en" class="item">EN</a></li>
+                            <li class="square"><a href="#" hreflang="de" class="item">DE</a></li>
+                            <li class="square current"><a href="#" hreflang="fr" class="item">FR</a></li>
+                            <li class="square"><a href="#" hreflang="lu" class="item">LU</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div id="main-container">
+            <div class="main clearfix" role="main">                
+                <section>
+                    <header id="content-header"><h1>Passer une commande</h1></header>
+                    
+                    <div class="inner-product-nav">
+                        <a class="toggle-nav current" href="#">Overview sélectionné</a>
+                        <ul>
+                            <li><a href="panier.html">1. Panier</a></li>
+                            <li><a href="livraison.html">2. Livraison</a></li>
+                            <li><a href="resume.html">3. Résumé</a></li>
+                            <li><a href="#">4. Paiement</a></li>
+                            <li><a href="validation.html" class="active">5. Validation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="main-content">
+                        <section class="bg-grey-pattern clearfix thanks">
+                            <h2 class="lines-title"><span class="the-title">Merci</span></h2>
+                            <p>
+                                Nous vous remercions pour Votre commande <a href="#">ABHDGDE46546</a>. Celle-ci a bien été validée par notre service.
+                                <br />
+                                Vous allez recevoir un email de confirmation avec le résumé de cette commande.
+                            </p>
+                            <p>
+                                Dans le cas d’un acompte, nous vous contacterons pour finaliser la commande.
+                                <br />
+                                Pour toute demande d’information, vous pouvez nous <a href="#">contacter ici</a>.
+                            </p>
+                            <a href="shop-produits-liste.html" class="btn-primary btn-big">Retourner au shop</a>
+                        </section>
+                        <section class="basket clearfix">
+                            <h2 class="lines-title"><span class="the-title">Résumé</span></h2>
+                            <div class="box-listing-container stacked shop basket-list">
+                                <ul class="box-listing">
+                                    <li class="box bgc-df867a icon-geoportail-acquisition-etat">
+                                        <article>
+                                            <a href='produit-details.html'>
+                                                <header>
+                                                    <p class="category">Plan cadastral numérisé</p>
+                                                    <p class="tags">Bâtiments</p>
+                                                    <h2>- Parcellaire</h2>
+                                                </header>
+                                            </a>
+                                            <div class="qty-price">
+                                                <span class="price">
+                                                    14,25€
+                                                </span>
+                                                <div class="basket-qty">
+                                                    <input type="text" value="2">
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="box bgc-e84c3d icon-geoportail-poi-manager">
+                                        <article>
+                                            <a href='produit-details.html'>
+                                                <header>
+                                                    <p class="category">Plan cadastral numérisé</p>
+                                                    <p class="tags">WMS</p>
+                                                    <h2>- Parcellaire</h2>
+                                                </header>
+                                            </a>
+                                            <div class="qty-price">
+                                                <span class="price">
+                                                    14,25€
+                                                </span>
+                                                <div class="basket-qty">
+                                                    <input type="text" value="2">
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="box bgc-16a085 icon-geoportail-cadastre">
+                                        <article>
+                                            <a href='produit-details.html'>
+                                                <header>
+                                                    <p class="category">Plan cadastral numérisé</p>
+                                                    <p class="tags">WMS</p>
+                                                    <h2>- Parcellaire</h2>
+                                                </header>
+                                            </a>
+                                            <div class="qty-price">
+                                                <span class="price">
+                                                    14,25€
+                                                </span>
+                                                <div class="basket-qty">
+                                                    <input type="text" value="2">
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="box bgc-f39c11">
+                                        <article>
+                                            <a href='produit-details.html'>
+                                                <header>
+                                                    <p class="category">Plan cadastral numérisé</p>
+                                                    <p class="tags">WMS</p>
+                                                    <h2>- Parcellaire</h2>
+                                                </header>
+                                            </a>
+                                            <div class="qty-price">
+                                                <span class="price">
+                                                    14,25€
+                                                </span>
+                                                <div class="basket-qty">
+                                                    <input type="text" value="2">
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                    <li class="box bgc-2a80b9">
+                                        <article>
+                                            <a href='produit-details.html'>
+                                                <header>
+                                                    <p class="category">Plan cadastral numérisé</p>
+                                                    <p class="tags">WMS</p>
+                                                    <h2>- Parcellaire</h2>
+                                                </header>
+                                            </a>
+                                            <div class="qty-price">
+                                                <span class="price">
+                                                    14,25€
+                                                </span>
+                                                <div class="basket-qty">
+                                                    <input type="text" value="2">
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </li>
+                                </ul>
+                                
+                                <div class="basket-list-nav">
+                                    <span class="prev">Précédent</span>
+                                    <span class="next">Suivant</span>
+                                </div>
+                            </div>
+                            <dl class="prices">
+                                <dt class="ttc">Total TTC</dt>
+                                <dd class="ttc">26,45€</dd>
+                                <dt class="ht">Total HT</dt>
+                                <dd class="ht">23,00€</dd>
+                            </dl>
+                        </section>
+
+                        <section class="bg-grey-pattern clearfix recap-adresses">
+                            <h2 class="lines-title"><span class="the-title">Adresses</span></h2>
+
+                            <form action="#" method="post" class="recap-form">
+                                <h3>Adresse de facturation</h3>
+                                <div class="field-row">
+                                    <label for="facturation-firstname">Prénom* :</label>
+                                    <input type="text" id="facturation-firstname" value="Nathalie" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-lastname">Nom* :</label>
+                                    <input type="text" id="facturation-lastname" value="Matiz"  readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-email">Email* :</label>
+                                    <input type="email" id="facturation-email" value="nathalie.matiz@nvision.lu" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-telephone">Téléphone* :</label>
+                                    <input type="tel" id="facturation-telephone" value="00 01 02 03" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-adress">Adresse* :</label>
+                                    <input type="text" id="facturation-adress" value="7, rue Jean Fischbach" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-postcode">Code postal* :</label>
+                                    <input type="text" id="facturation-postcode" value="3345" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-city">VIlle* :</label>
+                                    <input type="text" id="facturation-city" value="Leudelange" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-billigadress">Pays :</label>
+                                    <input type="text" id="facturation-billigadress" value="Luxembourg" readonly="readonly">
+                                </div>
+                            </form>
+
+                            <form action="#" method="post" class="recap-form">
+                                <h3>Adresse de livraison</h3>
+                                <div class="field-row">
+                                    <label for="facturation-firstname">Prénom* :</label>
+                                    <input type="text" id="facturation-firstname" value="Nathalie" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-lastname">Nom* :</label>
+                                    <input type="text" id="facturation-lastname" value="Matiz"  readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-email">Email* :</label>
+                                    <input type="email" id="facturation-email" value="nathalie.matiz@nvision.lu" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-telephone">Téléphone* :</label>
+                                    <input type="tel" id="facturation-telephone" value="00 01 02 03" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-adress">Adresse* :</label>
+                                    <input type="text" id="facturation-adress" value="7, rue Jean Fischbach" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-postcode">Code postal* :</label>
+                                    <input type="text" id="facturation-postcode" value="3345" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-city">VIlle* :</label>
+                                    <input type="text" id="facturation-city" value="Leudelange" readonly="readonly">
+                                </div>
+                                <div class="field-row">
+                                    <label for="facturation-billigadress">Pays :</label>
+                                    <input type="text" id="facturation-billigadress" value="Luxembourg" readonly="readonly">
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                    
+                    <footer>
+                        <a href="shop-produits-liste.html" class="btn-primary btn-big">Retourner au shop</a>
+                    </footer>
+                </section>
+            </div> <!-- #main -->    
+        </div> <!-- #main-container -->
+
+        <footer id="footer">
+            <ul id="footer-navigation">
+                <li><a href="#" >Aspects légaux</a></li>
+                <li><a href="#" >Aide</a></li>                
+                <li><a href="#" >Plan du site</a></li>                
+                <li><a href="http://www.act.public.lu" id="link-act" target="_blank">ACT</a></li>                    
+            </ul>
+            
+            <aside id="tool-box" class="desktop">
+                <ul>
+                    <li><a href="javascript:window.print();" class="print square">Print</a></li>
+                    <li>
+                        <a href="#" id="share-button" class="share square">Share</a>
+                        <div class="second-level">
+                            <p class="menu-title">Share</p>                                
+                        </div>    
+                    </li>                        
+                </ul>                
+            </aside>                 
+        </footer>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+
+        <script src="js/vendor/jquery.ba-throttle-debounce.min.js"></script>
+        <script src="js/vendor/jquery.transit.min.js"></script>
+        <script src="js/vendor/jquery.touchSwipe.min.js"></script>
+        <script src="js/vendor/jquery.mousewheel.min.js"></script>
+        <script src="js/vendor/jquery.carouFredSel-6.2.1-packed.js"></script>
+        <script src="js/vendor/jquery.tinysort.min.js"></script>
+        <script src="js/vendor/jquery.placeholder.min.js"></script>
+        <script src="js/vendor/jquery.selectbox-0.2.min.js"></script>
+        <script src="js/vendor/icheck.min.js"></script>
+        <script src="js/geoListBox.js"></script>
+        <script src="js/geoContactBox.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
