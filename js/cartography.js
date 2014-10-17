@@ -61,6 +61,13 @@
             $(".my-layers").sortable();
         }
 
+        if ($('#add-layers').length) {
+            $('#add-layers').on('click', function() {
+                $('#liste').click();
+            });
+        }
+        // simulate a click on couches
+
         /***** 
          ** Slidepanel 
          *****/
