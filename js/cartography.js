@@ -7,6 +7,9 @@
                 if( !$(this).hasClass('off') ) {
                     $(this).addClass('off');
                     $(this).fadeOut();
+
+                    // simulate a click on couches
+                    $('.left-menu .couches').click();
                 }
             });
         }
