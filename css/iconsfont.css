@@ -269,3 +269,12 @@
         bottom:0;
     }
 }
+
+#flash {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    background-color: yellow;
+    padding: 5px 10px;
+    right: 50%;
+}

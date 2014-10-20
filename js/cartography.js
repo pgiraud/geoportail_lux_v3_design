@@ -68,6 +68,12 @@
         }
         // simulate a click on couches
 
+        // show message when adding a layer
+        $('.icheckbox_square-blue .iCheck-helper').on('click', function() {
+            $('#flash').text('Couche ajoutée');
+            $('#flash').fadeIn().delay(2000).fadeOut(800);
+        });
+
         /***** 
          ** Slidepanel 
          *****/
