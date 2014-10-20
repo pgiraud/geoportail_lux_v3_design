@@ -3236,34 +3236,68 @@ textarea {
 }
 .cartography[data-map-theme] .sidepanel .layer-visibility,
 .cartography[data-map-theme] .sidepanel .layer-delete {
-    float:left;
     width:13px;
     height:22px;
-    margin-right:5px;
     cursor:pointer;
     position:relative;
 }
-.cartography[data-map-theme] .sidepanel .layer-info {
+
+.cartography[data-map-theme] .sidepanel .layer-more {
+    float: right;
+    cursor: pointer;
+}
+.cartography[data-map-theme] .my-layers .toggle-accordion.active .layer-more {
+    display: none;
+}
+.cartography[data-map-theme] .sidepanel .layer-less {
+    float: right;
+    display: none;
+    cursor: pointer;
+}
+.cartography[data-map-theme] .my-layers .toggle-accordion.active .layer-less {
+    display: block;
+}
+.cartography[data-map-theme] .sidepanel .layer-visibility {
+    float:left;
+    margin-left: 20px;
+    margin-right: 15px;
+}
+.cartography[data-map-theme] .sidepanel .layer-delete {
     float:right;
+}
+.cartography[data-map-theme] .sidepanel .layer-info {
     width:13px;
     height:22px;
-    text-indent:-999em;
-    margin-right:20px;
+    margin-right: 5px;
+    margin-left: 5px;
     cursor:pointer;
     position:relative;
 }
 .cartography[data-map-theme] .sidepanel .layer-info:after {
-    position:absolute;
-    left:0;
-    top:0;
-    font-family: "geoportail-icons" !important;
-    content: "\e01f";
-    text-indent:0;
-    font-size:1.25em;
+    /*position:absolute;*/
+    /*left:0;*/
+    /*top:0;*/
+    /*font-family: "geoportail-icons" !important;*/
+    /*content: "\e01f";*/
+    /*text-indent:0;*/
+    /*font-size:1.25em;*/
 }
 .cartography[data-map-theme] .sidepanel .layer-info:hover:after {
     color:#fff;
 }
+.cartography[data-map-theme] .my-layers > li .layer-reorder {
+    /* 0 doesn't work with FF */
+    opacity: 0.01;
+}
+.cartography[data-map-theme] .my-layers > li:hover .layer-reorder {
+    opacity: .5;
+}
+.cartography[data-map-theme] .sidepanel .layer-reorder {
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+    cursor: grab;
+}
+
 .cartography[data-map-theme] .sidepanel [class^="gfx-"] {
     float:left;
     display:inline-block;
@@ -3303,13 +3337,12 @@ textarea {
 
 .cartography[data-map-theme] .my-layers > li {
     display:block;
-    cursor:pointer;
     margin-bottom:1px;
     position:relative;
     background-color: #E88C83;
 }
 .cartography[data-map-theme] .my-layers > li:hover {
-    cursor:all-scroll;
+    /*cursor:all-scroll;*/
 }
 .cartography[data-map-theme] .my-layers .toggle-accordion {
     padding:5px 10px;
@@ -3319,7 +3352,7 @@ textarea {
     background:transparent;
 }
 .cartography[data-map-theme] .my-layers .toggle-accordion:before {
-    content:'';
+    /*content:'';*/
     display:block;
     width:17px;
     height:3px;
@@ -3331,7 +3364,7 @@ textarea {
     display:none;
 }
 .cartography[data-map-theme] .my-layers .toggle-accordion:after {
-    content:'';
+    /*content:'';*/
     display:block;
     height:17px;
     width:3px;
@@ -3347,8 +3380,7 @@ textarea {
 }
 .cartography[data-map-theme] .my-layers .slider {
     display:inline-block;
-    width:240px;
-    margin-right:10px;
+    width:50px;
 }
 
 /* Footer */
