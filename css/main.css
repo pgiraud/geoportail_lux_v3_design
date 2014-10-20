@@ -3234,12 +3234,21 @@ textarea {
 .cartography[data-map-theme] .sidepanel .layers-options ul ul ul > li {
     margin-right:0;
 }
-.cartography[data-map-theme] .sidepanel .layer-info {
+.cartography[data-map-theme] .sidepanel .layer-visibility,
+.cartography[data-map-theme] .sidepanel .layer-delete {
     float:left;
     width:13px;
     height:22px;
-    text-indent:-999em;
     margin-right:5px;
+    cursor:pointer;
+    position:relative;
+}
+.cartography[data-map-theme] .sidepanel .layer-info {
+    float:right;
+    width:13px;
+    height:22px;
+    text-indent:-999em;
+    margin-right:20px;
     cursor:pointer;
     position:relative;
 }
@@ -3340,29 +3349,6 @@ textarea {
     display:inline-block;
     width:240px;
     margin-right:10px;
-}
-.cartography[data-map-theme] .my-layers .delete-layer {
-    border-radius: 3px;
-    height: 13px;
-    position: absolute;
-    right: 17px;
-    top: 13px;
-    width: 13px;
-    background:#ee1b2e;
-    color:#fff;
-    border:0;
-    padding:0;
-    text-indent:-999em;
-}
-.cartography[data-map-theme] .my-layers .delete-layer:after {
-    content: "\e02b";
-    font-family: "geoportail-icons" !important;
-    font-size: 7px;
-    left: 3px;
-    line-height: 1;
-    position: absolute;
-    text-indent: 0;
-    top: 3px;
 }
 
 /* Footer */
