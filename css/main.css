@@ -3387,6 +3387,19 @@ textarea {
     margin: 0 10px;
 }
 
+#theme-selector {
+    color: white;
+    margin: 10px;
+}
+#theme-selector span {
+    text-transform:uppercase;
+}
+#theme-selector a.small {
+    /*float: right;*/
+    font-size: 0.8em;
+    color: white; 
+}
+
 /* Footer */
 .cartography[data-map-theme] #tool-box {
     width:258px;
