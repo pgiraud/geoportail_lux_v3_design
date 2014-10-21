@@ -3383,6 +3383,10 @@ textarea {
     width:50px;
 }
 
+#mes-couches-content>div {
+    margin: 0 10px;
+}
+
 /* Footer */
 .cartography[data-map-theme] #tool-box {
     width:258px;
