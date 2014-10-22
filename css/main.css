@@ -3400,6 +3400,10 @@ textarea {
     color: white; 
 }
 
+#liste-content>.scrollable {
+    display: none;
+}
+
 /* Footer */
 .cartography[data-map-theme] #tool-box {
     width:258px;

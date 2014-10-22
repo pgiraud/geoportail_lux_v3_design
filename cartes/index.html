@@ -183,27 +183,8 @@
             
             <aside class="sidepanel">
                 <div class="maps-panel">
-                    <h2>Cartes</h2>
+                    <h2>Mes cartes</h2>
                     <button class="close-panel">✕</button>
-                    
-                    <ul class="tabs">
-                        <li id="themes">Thèmes</li>
-                        <li id="mes-themes">Mes cartes</li>
-                    </ul>
-                    <div class="tabs-content">
-                        <div id="mes-themes-content">
-                            <div class="scrollable">
-                                <ul class="themes-list clearfix">
-                                    <li class="eau">
-                                        <a href="#">Eau</a>
-                                    </li>
-                                    <li class="environnement">
-                                        <a href="#">Environnement</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="layers-panel">
                     <h2>Couches</h2>
@@ -257,7 +238,23 @@
                                 Thème: <span>Environnement</span>
                                 <a href class="small">Changer</a>
                             </div>
-                            <div class="scrollable">
+                            <div class="scrollable" id="catalog-grand-public">
+                                <ul class="layers-options">
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Infrastructure et communication</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Couverture du sol</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Environnement, biologie et géologie</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scrollable" id="catalog-environnement">
                                 <ul class="layers-options">
                                     <li>
                                         <span class="toggle-accordion">Unités administratives</span>
@@ -443,6 +440,51 @@
                                                 </ul>
                                             </li>
                                         </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scrollable" id="catalog-agriculture">
+                                <ul class="layers-options">
+                                    <li>
+                                        <span class="toggle-accordion">Données agricoles</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Sols</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Zones de protection</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scrollable" id="catalog-eau">
+                                <ul class="layers-options">
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Stations de mesures</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Cours d'eau</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Eau souterraine</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scrollable" id="catalog-tourisme">
+                                <ul class="layers-options">
+                                    <li>
+                                        <span class="toggle-accordion">Cartes topographiques</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Chemins de randonnée</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Itinéraires cyclables et VTT</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Sentiers Auto - moto</span>
                                     </li>
                                 </ul>
                             </div>

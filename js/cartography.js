@@ -1,9 +1,13 @@
 (function($) {
 
     function loadTheme(theme) {
+        var current = $(document.body).attr('data-map-theme');
+        $('#catalog-' + current).hide();
+
         $(document.body).attr('data-map-theme', theme);
         $('#logo .baseline').text('Administration de ' + theme);
         $('#theme-selector span').text(theme);
+        $('#catalog-' + theme).show();
     }
 
     $(document).ready(function() {
