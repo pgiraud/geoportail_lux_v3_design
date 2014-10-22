@@ -8,8 +8,22 @@
                     $(this).addClass('off');
                     $(this).fadeOut();
 
-                    // simulate a click on couches
-                    $('.left-menu .couches').click();
+                    var tooltips = $(".left-menu .couches").qtip({
+                        id: "mytooltip",
+                        content: "Cliquez ici pour ajouter des couches",
+                        position: {
+                            my: 'bottom left',  // Position my top left...
+                            at: 'top center' // at the bottom right of...
+                        },
+                        style: {
+                            classes: 'tooltip',
+                            tip: {
+                                corner: true
+                            }
+                        }
+                    });
+                    var api = tooltips.qtip('api');
+                    api.show("mytooltip");
                 }
             });
         }
