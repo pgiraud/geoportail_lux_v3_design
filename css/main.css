@@ -3394,10 +3394,62 @@ textarea {
 #theme-selector span {
     text-transform:uppercase;
 }
-#theme-selector a.small {
-    /*float: right;*/
+#theme-selector a {
+    float: right;
     font-size: 0.8em;
-    color: white; 
+    padding: 2px 4px;
+    text-decoration: none;
+}
+#theme-selector a:hover {
+    color: white !important;
+}
+.cartography[data-map-theme="grand-public"] #theme-selector a {
+    color: #97bbd3; 
+    background-color: #1f5d87;
+}
+.cartography[data-map-theme="agriculture"] #theme-selector a {
+    color: #d69e45; 
+    background-color: #9c6101;
+}
+.cartography[data-map-theme="tourisme"] #theme-selector a {
+    color: #e88c83; 
+    background-color: #943d3d;
+}
+
+#theme-selector table {
+    display: inline-block;
+    border-collapse: separate;
+    border-spacing: 1px;
+    vertical-align: middle;
+    /*border: 1px solid white;*/
+}
+#theme-selector table tr>td {
+    width: 10px;
+    height: 10px;
+}
+#theme-selector table tr>td.general {
+    background-color: #2980b9;
+}
+#theme-selector table tr>td.agriculture {
+    background-color: #f39c12;
+}
+#theme-selector table tr>td.tourisme {
+    background-color: #e74c3c;
+}
+#theme-selector table tr>td.eau {
+    background-color: #03a2ac;
+}
+#theme-selector table tr>td.environnement {
+    background-color: #879c31;
+}
+#theme-selector table tr>td.amenagement {
+    background-color: #51976e;
+}
+#theme-selector table tr>td.sol {
+    background-color: #be8541;
+}
+#theme-selector table tr>td.mobiliteits {
+    background-color: #d10074;
 }
 
 #liste-content>.scrollable {
