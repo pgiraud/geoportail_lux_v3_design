@@ -92,7 +92,7 @@
                         <img src="../img/lion.png" alt="" />
                     </a>
                     <span class="baseline">
-                        Administration de la l'environnement<br/>
+                        Administration de l'environnement<br/>
                         Administration de la la nature et des forêts
                     </span>
                     <a href="#" id="mobile-logo" class="mobile">
@@ -184,57 +184,8 @@
             
             <aside class="sidepanel">
                 <div class="maps-panel">
-                    <h2>Cartes</h2>
+                    <h2>Mes cartes</h2>
                     <button class="close-panel">✕</button>
-                    
-                    <ul class="tabs">
-                        <li id="themes">Thèmes</li>
-                        <li id="mes-themes">Mes cartes</li>
-                    </ul>
-                    <div class="tabs-content">
-                        <div id="themes-content">
-                            <div class="scrollable">
-                                <ul class="themes-list clearfix">
-                                    <li class="grand-public">
-                                        <a href="#">Grand-public</a>
-                                    </li>
-                                    <li class="agriculture">
-                                        <a href="#">Agriculture</a>
-                                    </li>
-                                    <li class="tourisme">
-                                        <a href="#">Tourisme</a>
-                                    </li>
-                                    <li class="eau">
-                                        <a href="#">Eau</a>
-                                    </li>
-                                    <li class="environnement">
-                                        <a href="#">Environnement</a>
-                                    </li>
-                                    <li class="plan-amenagement">
-                                        <a href="#">Plan d'aménagement</a>
-                                    </li>
-                                    <li class="sol">
-                                        <a href="#">Données du sol</a>
-                                    </li>
-                                    <li class="mobilite">
-                                        <a href="#">Mobilitéits zentral</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div id="mes-themes-content">
-                            <div class="scrollable">
-                                <ul class="themes-list clearfix">
-                                    <li class="eau">
-                                        <a href="#">Eau</a>
-                                    </li>
-                                    <li class="environnement">
-                                        <a href="#">Environnement</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
                 </div>
                 <div class="layers-panel">
                     <h2>Couches</h2>
@@ -249,13 +200,78 @@
                     </div>
                     
                     <ul class="tabs">
-                        <li id="mes-couches">Mes couches (2)</li>
+                        <li id="mes-couches">Mes couches (<span id="my-layers-count">2</span>)</li>
                         <li id="liste">Catalogue</li>
                     </ul>
                     <div class="tabs-content">
-                        <div id="liste-content">
-                            
+                        <div id="themes-content">
                             <div class="scrollable">
+                                <ul class="themes-list clearfix">
+                                    <li class="grand-public">
+                                        <a href="#" data-map-theme="grand-public">Grand-public</a>
+                                    </li>
+                                    <li class="agriculture">
+                                        <a href="#" data-map-theme="agriculture">Agriculture</a>
+                                    </li>
+                                    <li class="tourisme">
+                                        <a href="#" data-map-theme="tourisme">Tourisme</a>
+                                    </li>
+                                    <li class="eau">
+                                        <a href="#" data-map-theme="eau">Eau</a>
+                                    </li>
+                                    <li class="environnement">
+                                        <a href="#" data-map-theme="environnement">Environnement</a>
+                                    </li>
+                                    <li class="plan-amenagement">
+                                        <a href="#">Plan d'aménagement</a>
+                                    </li>
+                                    <li class="sol">
+                                        <a href="#">Données du sol</a>
+                                    </li>
+                                    <li class="mobilite">
+                                        <a href="#">Mobilitéits zentral</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="liste-content">
+                            <div id="theme-selector">
+                                Thème: <span>Environnement</span>
+                                <a href class="">
+                                    Changer
+                                    <table>
+                                        <tr>
+                                            <td class="general"></td>
+                                            <td class="agriculture"></td>
+                                            <td class="tourisme"></td>
+                                            <td class="eau"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="environnement"></td>
+                                            <td class="amenagement"></td>
+                                            <td class="sol"></td>
+                                            <td class="mobiliteits"></td>
+                                        </tr>
+                                    </table>
+                                </a>
+                            </div>
+                            <div class="scrollable" id="catalog-grand-public">
+                                <ul class="layers-options">
+                                    <li>
+                                        <span class="toggle-accordion">Données de base</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Infrastructure et communication</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Couverture du sol</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Environnement, biologie et géologie</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scrollable" id="catalog-environnement">
                                 <ul class="layers-options">
                                     <li>
                                         <span class="toggle-accordion">Unités administratives</span>
@@ -442,190 +458,50 @@
                                             </li>
                                         </ul>
                                     </li>
+                                </ul>
+                            </div>
+                            <div class="scrollable" id="catalog-agriculture">
+                                <ul class="layers-options">
                                     <li>
-                                        <span class="toggle-accordion">Données de base</span>
-                                        <ul class="accordion-content">
-                                            <li>
-                                                <span class="toggle-accordion">Morphométrie</span>
-                                                <ul class="accordion-content">
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
-                                                        <input id="courbes-niveau-10m" type="checkbox" />
-                                                        <ul class="third-level">
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <span class="toggle-accordion">Données agricoles</span>
                                     </li>
                                     <li>
-                                        <span class="toggle-accordion">Données de base</span>
-                                        <ul class="accordion-content">
-                                            <li>
-                                                <span class="toggle-accordion">Morphométrie</span>
-                                                <ul class="accordion-content">
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
-                                                        <input id="courbes-niveau-10m" type="checkbox" />
-                                                        <ul class="third-level">
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <span class="toggle-accordion">Sols</span>
                                     </li>
                                     <li>
-                                        <span class="toggle-accordion">Données de base</span>
-                                        <ul class="accordion-content">
-                                            <li>
-                                                <span class="toggle-accordion">Morphométrie</span>
-                                                <ul class="accordion-content">
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
-                                                        <input id="courbes-niveau-10m" type="checkbox" />
-                                                        <ul class="third-level">
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <span class="toggle-accordion">Zones de protection</span>
                                     </li>
+                                </ul>
+                            </div>
+                            <div class="scrollable" id="catalog-eau">
+                                <ul class="layers-options">
                                     <li>
                                         <span class="toggle-accordion">Données de base</span>
-                                        <ul class="accordion-content">
-                                            <li>
-                                                <span class="toggle-accordion">Morphométrie</span>
-                                                <ul class="accordion-content">
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
-                                                        <input id="courbes-niveau-10m" type="checkbox" />
-                                                        <ul class="third-level">
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
                                     </li>
                                     <li>
-                                        <span class="toggle-accordion">Données de base</span>
-                                        <ul class="accordion-content">
-                                            <li>
-                                                <span class="toggle-accordion">Morphométrie</span>
-                                                <ul class="accordion-content">
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label for="courbes-niveau-10m">Courbes de niveau 10m</label>
-                                                        <input id="courbes-niveau-10m" type="checkbox" />
-                                                        <ul class="third-level">
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                            <li>
-                                                                <a href><i class="fa fa-info"></i></a>
-                                                                <label>Courbes de niveau 10m</label>
-                                                                <input type="checkbox" />
-                                                            </li>
-                                                        </ul>
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                    <li>
-                                                        <a href><i class="fa fa-info"></i></a>
-                                                        <label>Courbes de niveau 10m</label>
-                                                        <input type="checkbox" />
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        <span class="toggle-accordion">Stations de mesures</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Cours d'eau</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Eau souterraine</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="scrollable" id="catalog-tourisme">
+                                <ul class="layers-options">
+                                    <li>
+                                        <span class="toggle-accordion">Cartes topographiques</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Chemins de randonnée</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Itinéraires cyclables et VTT</span>
+                                    </li>
+                                    <li>
+                                        <span class="toggle-accordion">Sentiers Auto - moto</span>
                                     </li>
                                 </ul>
                             </div>

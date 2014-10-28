@@ -1,6 +1,21 @@
 (function($) {
 
+    function loadTheme(theme) {
+        var current = $(document.body).attr('data-map-theme');
+        $('#catalog-' + current).hide();
+
+        $(document.body).attr('data-map-theme', theme);
+        $('#logo .baseline').text('Administration de ' + theme);
+        $('#theme-selector span').text(theme);
+        $('#catalog-' + theme).show();
+    }
+
     $(document).ready(function() {
+        // load theme
+        var theme = getParameterByName('theme') || 'grand-public';
+        loadTheme(theme);
+
+
         /* Hide welcome overlayer */
         if ($('.welcome-overlayer').length) {
             $('.welcome-overlayer, .close-overlayer').on('click', function() {
@@ -24,6 +39,8 @@
                     });
                     var api = tooltips.qtip('api');
                     api.show("mytooltip");
+                    // simulate a click on couches
+                    //$('.left-menu .couches').click();
                 }
             });
         }
@@ -84,8 +101,22 @@
 
         // show message when adding a layer
         $('.icheckbox_square-blue .iCheck-helper').on('click', function() {
-            $('#flash').text('Couche ajoutée');
+            $('#flash').text('Couche "Réserves forestières" ajoutée');
             $('#flash').fadeIn().delay(2000).fadeOut(800);
+            $('#my-layers-count').text(3);
+        });
+
+        $('.themes-list>li>a').on('click', function() {
+            var theme = $(this).attr('data-map-theme');
+            if (theme) {
+                loadTheme(theme);
+                $('#themes-content').hide();
+            }
+        });
+
+        $('#theme-selector>a').on('click', function() {
+            $('#themes-content').show();
+            return false;
         });
 
         /***** 
@@ -196,6 +227,21 @@
             });
         }
 
+
+        var change = getParameterByName('change');
+        if (change) {
+            $('.welcome-overlayer').hide();
+            $('.left-menu>li>a.couches').click();
+            $('#liste').click();
+        }
+
     });
 
 })(jQuery);
+
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
