@@ -2901,7 +2901,7 @@ textarea {
 }
 .cartography .baseline {
     float:left;
-    padding-top: 15px;
+    /*padding-top: 15px;*/
     padding-left:50px;
     margin-right:20px;
     text-align:left;
@@ -2911,7 +2911,7 @@ textarea {
     font-family: "geoportail-icons" !important;
     position:absolute;
     left:0;
-    top:23px;
+    top:10px;
     font-size:2.5em;
 }
 .cartography-header #logo a {
@@ -4645,6 +4645,70 @@ textarea {
    
 }
 
+
+#header {
+    height: 49px;
+}
+#logo {
+    height: 49px;
+}
+#main-container {
+    margin-top: 49px;
+}
+#user-experience .square {
+    height:49px;
+    width:49px;
+}
+.cartography .map-controls,
+.shop-map .map-controls {
+    margin: 10px 10px;
+}
+#mobile-logo {height: 48px; width: 48px;}
+#user-experience .square .item { height: 49px; width: 49px; }
+#user-experience>li>a:after {
+    font-size:1.5em;
+    top:12px;
+}
+.cartography .map-controls li.enlarge {
+    display: none;
+}
+.cartography .map-legend {
+    display: none;
+}
+
+@media only screen and (max-width: 970px) {
+    .cartography[data-map-theme] .sidepanel {
+        top: 0px;
+        z-index: 2000;
+    }
+    .cartography[data-map-theme] .left-menu {
+        position: absolute;
+        bottom: 20px;
+        left: -2px;
+    }
+    .cartography[data-map-theme] .left-menu li {
+        display: block;
+        font-size: 0.8em;
+    }
+
+    .cartography[data-map-theme="environnement"] .left-menu a {
+        background-color: white;
+        border: 1px solid #8394a0;
+        border-radius: 0 5px 5px 0;
+        margin-top: 5px;
+        height: 48px;
+        width: 49px;
+        padding-top: 25px;
+    }
+    .cartography[data-map-theme] .left-menu a:after {
+        top: 5px;
+    }
+}
+.cartography[data-map-theme] .left-menu {
+    -webkit-transition:all 500ms ease;
+    -moz-transition:all 500ms ease;
+    transition:all 500ms ease;
+}
 
 @media only screen and (min-width: 970px) {
 /*@media only screen and (min-width: 480px) {*/

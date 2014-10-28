@@ -87,14 +87,14 @@
                 </nav>
             </div>
             <div class="cartography-header">
-                <div id="logo">
+                <div id="logo" class="">
                     <a href="#" data-header-show="geoportail-header" data-header-hide="cartography-header" id="desktop-logo">
                         <img src="../img/lion.png" alt="" />
+                        <span class="baseline mobile">
+                            Administration de la l'environnement<br/>
+                            Administration de la la nature et des forêts
+                        </span>
                     </a>
-                    <span class="baseline">
-                        Administration de la l'environnement<br/>
-                        Administration de la la nature et des forêts
-                    </span>
                     <a href="#" id="mobile-logo" class="mobile">
                         <img src="../img/lion-mobile.png" alt="Le géoportail national du grand-duché du Luxembourg" />
                     </a>
@@ -102,10 +102,13 @@
                 
                 <ul id="user-experience">
                     <li class="search">
-                        <form class="clearfix" id="navigation-search" action="search.html" method="POST" role="search">
+                        <form class="clearfix desktop" id="navigation-search" action="search.html" method="POST" role="search">
                             <input type="text" name="keyword" id="search-keyword" placeholder="Mot-clés" />
                             <input type="submit" value="search" />
                         </form>
+                    </li>
+                    <li class="square search mobile">
+                        <a href="#" class="item">Mon compte</a>  
                     </li>
                     <li class="square user">
                         <a href="#" class="item">Mon compte</a>  

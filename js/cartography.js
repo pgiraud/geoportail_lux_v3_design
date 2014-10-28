@@ -146,6 +146,7 @@
 
                     /* Push content to right */
                     $('.main ').css('margin-left', '320px');
+                    $('.left-menu').css('margin-left', '320px');
 
                     /* Scrollable height */
                     calcScrollableHeight();
@@ -159,6 +160,7 @@
                 $('.main ').css('margin-left', '0');
 
                 $('.active', '.left-menu').removeClass('active');
+                $('.left-menu').css('margin-left', '0');
             });
 
 
