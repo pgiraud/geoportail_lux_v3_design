@@ -188,6 +188,11 @@
                     /* Scrollable height */
                     calcScrollableHeight();
                     isScrollable();
+
+                    if (!$(this).hasClass('infos')) {
+                        $('.infos').hide();
+                        $('#vtt').hide();
+                    }
                 });
             });
 
