@@ -119,6 +119,13 @@
             return false;
         });
 
+        $('.main').on('click', function(evt) {
+            if (evt.clientX < 1000 && evt.clientX > 400 && evt.clientY > 420 && evt.clientY < 800) {
+                $('#vtt').show();
+                $('.infos').show().click();
+            }
+        });
+
         /***** 
          ** Slidepanel 
          *****/
@@ -190,6 +197,11 @@
                 $('.main ').css('margin-left', '0');
 
                 $('.active', '.left-menu').removeClass('active');
+
+                if ($(this).parents('.infos-panel').length) {
+                    $('.infos').hide();
+                    $('#vtt').hide();
+                }
             });
 
 
