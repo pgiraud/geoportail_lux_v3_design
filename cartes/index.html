@@ -193,16 +193,22 @@
                     <h2>Infos</h2>
                     <button class="close-panel">✕</button>
                     <div class="scrollable">
-                        <em>2 résultats</em>
-                        <ul class="layers-options">
-                            <li>
-                                <span class="toggle-accordion">Dalheim VTT / MTB</span>
-                            </li>
-                            <li>
-                                <span class="toggle-accordion">Clausen VTT
-                                </span>
-                            </li>
-                        </ul>
+                        <div id="results_empty" style="">
+                            Click on the map to get detailed informations.
+                        </div>
+                        <div id="results" style="display: none;">
+                            <em>2 résultats</em>
+                            <ul class="layers-options">
+                                <li>
+                                    <span class="toggle-accordion">Dalheim VTT / MTB</span>
+                                </li>
+                                <li>
+                                    <span class="toggle-accordion">Clausen VTT
+                                    </span>
+                                </li>
+                            </ul>
+                            <button id="clear">clear results</button>
+                        </div>
                     </div>
                 </div>
                 <div class="layers-panel">
@@ -626,7 +632,7 @@
                     <a href="#" class="cartes square" data-slidepanel="maps-panel">Cartes</a>
                 </li>
                 <li>
-                    <a href="#" class="infos square" data-slidepanel="infos-panel" style="display: none;">Infos</a>
+                    <a href="#" class="infos square" data-slidepanel="infos-panel"><i class="badge">2</i>Infos</a>
                 </li>
             </ul>
             

@@ -5100,3 +5100,18 @@ textarea {
         page-break-after: avoid;
     }
 }
+
+
+.infos .badge {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: 1px solid;
+    padding: 3px;
+    line-height: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    font-weight: bold;
+    font-style: normal;
+}
