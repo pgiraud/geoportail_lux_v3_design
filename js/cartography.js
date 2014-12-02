@@ -198,10 +198,8 @@
 
                 $('.active', '.left-menu').removeClass('active');
 
-                if ($(this).parents('.infos-panel').length) {
-                    $('.infos').hide();
-                    $('#vtt').hide();
-                }
+                $('.infos').hide();
+                $('#vtt').hide();
             });
 
 
