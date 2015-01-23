@@ -3569,6 +3569,9 @@ textarea {
 .cartography[data-map-theme] .left-menu .couches:after {
     content:'\e00e';
 }
+.cartography[data-map-theme] .left-menu .infos:after {
+    content:'\e01f';
+}
 .cartography[data-map-theme] .left-menu a:hover,
 .cartography[data-map-theme] .left-menu a:focus,
 .cartography[data-map-theme] .left-menu .active {
@@ -5096,4 +5099,19 @@ textarea {
     h3 {
         page-break-after: avoid;
     }
+}
+
+
+.infos .badge {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: 1px solid;
+    padding: 3px;
+    line-height: 10px;
+    border-radius: 5px;
+    z-index: 2;
+    font-weight: bold;
+    font-style: normal;
 }

@@ -150,6 +150,8 @@
                     <li class="see-lu">Voir tout le luxembourg</li>
                     <li class="enlarge">Enlarge</li>
                 </ul>
+
+                <img id="vtt" src="../img/vtt.png" style="margin-left: 250px;display: none;"/>
                 
                 
                 <div class="map-legend">
@@ -186,6 +188,28 @@
                 <div class="maps-panel">
                     <h2>Mes cartes</h2>
                     <button class="close-panel">✕</button>
+                </div>
+                <div class="infos-panel">
+                    <h2>Infos</h2>
+                    <button class="close-panel">✕</button>
+                    <div class="scrollable">
+                        <div id="results_empty" style="">
+                            Click on the map to get detailed informations.
+                        </div>
+                        <div id="results" style="display: none;">
+                            <em>2 résultats</em>
+                            <ul class="layers-options">
+                                <li>
+                                    <span class="toggle-accordion">Dalheim VTT / MTB</span>
+                                </li>
+                                <li>
+                                    <span class="toggle-accordion">Clausen VTT
+                                    </span>
+                                </li>
+                            </ul>
+                            <button id="clear">clear results</button>
+                        </div>
+                    </div>
                 </div>
                 <div class="layers-panel">
                     <h2>Couches</h2>
@@ -606,6 +630,9 @@
                 </li>   
                 <li>
                     <a href="#" class="cartes square" data-slidepanel="maps-panel">Cartes</a>
+                </li>
+                <li>
+                    <a href="#" class="infos square" data-slidepanel="infos-panel"><i class="badge">2</i>Infos</a>
                 </li>
             </ul>
             
